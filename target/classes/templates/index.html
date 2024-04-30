@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Final Exam</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<header>
+    <span th:insert="supplement.html :: span.SheridanLogo">
+    </span> <div th:insert="supplement.html :: header"></div>
+</header>
+
+<h1>Sheridan Dice Roller</h1>
+
+<span th:insert="supplement.html :: span.Dice"></span>
+
+<form method="post" th:action="@{/rollDice}">
+    <table>
+        <tr>
+            <td>Number of Dice:</td>
+            <td><input type="number" name="num" style="width:50px;" min="1" required></td>
+        </tr>
+        <tr>
+            <td>Type of Dice:</td>
+            <td>
+                <select name="type" style="width:50px;">
+                    <option>4</option>
+                    <option selected>6</option>
+                    <option>8</option>
+                    <option>10</option>
+                    <option>12</option>
+                    <option>20</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Roll!"></td>
+        </tr>
+    </table>
+</form>
+
+<footer th:insert="supplement.html :: footer"></footer>
+
+</body>
+</html>

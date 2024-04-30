@@ -1,0 +1,32 @@
+
+header{
+	font-size:30px;
+	color:white;
+	background-color:blue;
+	border:3px solid white;
+}
+footer{
+	position:fixed;
+	width:100%;
+	bottom: 0;
+	font-size:20px;
+	color:white;
+	background-color:red;
+
+}
+td.fragment{
+	font-size:30px;
+	color:white;
+	background-color:blue;
+}
+td.title{
+	background-color:#c0c0c0;
+	width:30px;
+	border:1px solid black;
+}
+
+td.cell{
+	font-weight: bold;
+	width:30px;
+	border:1px solid black;
+}

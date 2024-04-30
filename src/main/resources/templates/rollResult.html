@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Roll Results</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<header>
+    <span th:insert="supplement.html :: span.SheridanLogo"></span>
+    <div th:insert="supplement.html :: header"></div>
+</header>
+
+<h1 th:text="'Here are your results (' + ${diceList[0].diceFaces} + ' sided dice)'"></h1>
+
+<table>
+    <tr>
+        <th class="title">Dice</th>
+        <td class="cell" th:each="r : ${rollList}" th:text="${r.rollNumber}">1</td>
+    </tr>
+    <tr>
+        <th class="title">Result</th>
+        <td class="cell" th:each="r : ${rollList}" th:text="${r.rollValue}">1</td>
+    </tr>
+    <tr>
+        <th class="title">Total</th>
+        <td class="cell" th:text="${diceList[0].diceTotal}">1</td>
+    </tr>
+</table>
+<br><br>
+<a th:href="@{/sameAgain}">Roll Same Settings Again?</a>
+<br><br>
+<a th:href="@{/newRoll}">New Roll</a>
+
+<footer th:insert="supplement.html :: footer"></footer>
+
+</body>
+</html>

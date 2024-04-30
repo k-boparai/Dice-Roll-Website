@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header>
+    <span th:insert="supplement.html :: span.SheridanLogo"></span>
+    <div th:insert="supplement.html :: header"></div>
+</header>
+    <h1>The parameters you entered were not valid, please try again</h1>
+    <br>
+    <a th:ref="@{/}">Back to Home</a>
+
+<footer th:insert="supplement.html :: footer"></footer>
+
+</body>
+</html>
